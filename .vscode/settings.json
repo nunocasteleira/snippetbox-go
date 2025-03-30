@@ -3,6 +3,7 @@
     "httprouter",
     "justinas",
     "mysqlstore",
+    "nosurf",
     "Signup",
     "snippetbox",
     "tmpl"
