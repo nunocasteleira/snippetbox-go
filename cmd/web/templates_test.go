@@ -1,6 +1,7 @@
 package main
 
 import (
+	"snippetbox-go.casteleira.xyz/internal/assert"
 	"testing"
 	"time"
 )
@@ -30,10 +31,8 @@ func TestHumanDate(t *testing.T) {
 
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			got := humanDate(tt.tm)
-			if got != tt.want {
-				t.Errorf("humanDate(%v) = %v; want %v", tt.tm, got, tt.want)
-			}
+			hd := humanDate(tt.tm)
+			assert.Equal(t, hd, tt.want)
 		})
 	}
 }
